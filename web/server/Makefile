@@ -1,3 +1,12 @@
 start:
-	export FLASK_ENV=development
-	flask run --host=0.0.0.0 --port=3001
+	export FLASK_ENV=development && python app/app.py
+	
+prod:
+	export FLASK_ENV=production && python run.py
+
+venv:
+	virtualenv ENV
+	# source ./bin/activate
+
+install:
+	pip install -r requirements.txt
