@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Plot from 'react-plotly.js';
 
 
 function Graph(props) {
-
     return(
+      <Fragment>
         <Plot
           data={props.data}
-          // layout={{width: 320, height: 240, title: 'A Fancy Plot'}}
           layout={props.layout}
-          onUpdate={this.updateHandler}
+          onUpdate={props.updateHandler}
         />
+      </Fragment>
     );
 }
 
