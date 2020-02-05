@@ -4,3 +4,4 @@ flask-restful
 python-dotenv
 SQLAlchemy
 flask-sqlalchemy
+numpy
