@@ -1,11 +1,22 @@
 version: '3'
 
 services:
+  # jupyter:
+  #   container_name: jupyterlab-container
+  #   image: cristianounix/datascience:rc-2.2.1
+  #   # working_dir: /notebooks
+  #   ports:
+  #     - "8888:8888"
+  #   volumes:
+  #     - ./:/notebooks
   jupyter:
+    image: jupyter/datascience-notebook:latest
     container_name: jupyterlab-container
-    image: cristianounix/datascience:rc-2.2.1
-    # working_dir: /notebooks
+    working_dir: /notebooks
     ports:
-      - "8888:8888"
+      - 8888:8888
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+      JUPYTER_TOKEN: "docker"
     volumes:
       - ./:/notebooks
