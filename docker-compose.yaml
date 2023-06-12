@@ -10,7 +10,8 @@ services:
   #   volumes:
   #     - ./:/notebooks
   jupyter:
-    image: jupyter/datascience-notebook:latest
+    # image: jupyter/datascience-notebook:latest
+    image: jupyter-local:local
     container_name: jupyterlab-container
     working_dir: /notebooks
     ports:
